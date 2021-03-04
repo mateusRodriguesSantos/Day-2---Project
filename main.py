@@ -18,6 +18,8 @@ percCost = float(cost) * tip
 
 newValue = float(cost) + percCost
 
-newCost = newValue / float(countPeople)
+newCost = round(newValue / float(countPeople), 2)
 
-print(f"Each person should pay: {round(newCost , 2)}")
+newCostFormated = "{:.2f}".format(newCost)
+
+print(f"Each person should pay: {newCostFormated} ")
